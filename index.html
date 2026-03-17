@@ -1,89 +1,209 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Invitation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>Wedding Invitation</title>
 
-    <!-- 고급 폰트 -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Noto+Serif+KR:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Noto+Serif+KR&display=swap" rel="stylesheet">
+
+<style>
+
+/* 기본 */
+body {
+    margin: 0;
+    font-family: 'Noto Serif KR', serif;
+    background: #fff;
+    color: #222;
+}
+
+/* 공통 */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* 커버 */
+.cover {
+    height: 100vh;
+    background: url('사진.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+}
+
+.cover-text {
+    position: absolute;
+    bottom: 80px;
+    width: 100%;
+    color: white;
+    z-index: 1;
+}
+
+.cover h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+}
+
+.cover p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* 애니메이션 */
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 메시지 */
+.message {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* D-day */
+.dday {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* 정보 */
+.info h2 {
+    font-size: 13px;
+    color: #999;
+}
+
+.info p {
+    margin-bottom: 30px;
+}
+
+/* 갤러리 */
+.gallery img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+/* 버튼 */
+.btn {
+    display: block;
+    margin: 10px auto;
+    padding: 14px;
+    width: 80%;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn.dark {
+    background: #222;
+    color: white;
+}
+
+.btn.light {
+    border: 1px solid #ddd;
+    color: #222;
+}
+
+/* footer */
+footer {
+    padding: 40px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- 커버 -->
+<section class="cover">
+    <div class="cover-text">
+        <h1>결혼이요 결혼</h1>
+        <p>2026.10.24 SAT 11:00</p>
+    </div>
+</section>
 
-    <!-- 메인 커버 -->
-    <section class="hero">
-        <h1>Seokyeong & Seokyeong</h1>
-        <p class="subtitle">Wedding Invitation</p>
-        <div class="date">2026.10.24 SAT 11:00</div>
-    </section>
-
-    <!-- 메시지 -->
-    <section class="main">
-        <p class="message">
-            서로 다른 길을 걸어온 두 사람<br>
-            이석영 · 삼석영<br><br>
-            이제 하나의 길을 함께 걸어가려 합니다.<br><br>
-            소중한 분들을 모시고<br>
-            새로운 시작을 함께하고자 합니다.
-        </p>
-        <p style="margin-top:10px; font-size:13px; color:#777; letter-spacing:1px;">
-    2026.10.24 SAT 11:00
-</p>
-    </section>
-
-    <!-- 이미지 -->
-    <section class="gallery">
-        <img src="사진.jpg" alt="웨딩 사진">
-    </section>
-
-    <!-- 정보 -->
-    <section class="info">
-        <div class="card">
-            <h2>💍 Wedding Day</h2>
-            <p>2026년 10월 24일 토요일 오전 11시</p>
-        </div>
-
-        <div class="card">
-            <h2>📍 Location</h2>
-            <p>서울특별시 영등포구 의사당대로 1<br>국회의사당 소통관</p>
-        </div>
-    </section>
-
-    <!-- 지도 -->
-    <section class="map">
-    <h2>📌 오시는 길</h2>
-
-    <p style="font-size:15px; margin-bottom:20px;">
-        서울 영등포구 의사당대로 1<br>
-        국회의사당 소통관
+<!-- 메시지 -->
+<section class="fade">
+    <p class="message">
+        서로 다른 길을 걸어온 두 사람 이석영, 삼석영이<br>
+        이제 하나의 길을 함께 걸어가려 합니다.<br><br>
+        소중한 분들을 모시고<br>
+        새로운 시작을 함께하고자 합니다.
     </p>
 
-    <!-- 네이버 지도 버튼 -->
-    <a href="https://map.naver.com/p/search/%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%82%AC%EB%8B%B9%20%EC%86%8C%ED%86%B5%EA%B4%80/place/1846720972"
-       target="_blank"
-       class="map-btn">
-        📍 네이버 지도 보기
+    <p class="dday" id="dday"></p>
+</section>
+
+<!-- 정보 -->
+<section class="info fade">
+    <h2>WEDDING DAY</h2>
+    <p>2026년 10월 24일 토요일 오전 11시</p>
+
+    <h2>LOCATION</h2>
+    <p>서울 영등포구 의사당대로 1<br>국회의사당 소통관</p>
+</section>
+
+<!-- 갤러리 -->
+<section class="gallery fade">
+    <img src="사진.jpg">
+    <img src="사진.jpg">
+</section>
+
+<!-- 지도 -->
+<section class="fade">
+    <h2>📍 오시는 길</h2>
+
+    <a href="https://map.naver.com/p/search/%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%82%AC%EB%8B%B9%20%EC%86%8C%ED%86%B5%EA%B4%80/place/1846720972" target="_blank" class="btn dark">
+        네이버 지도 보기
     </a>
 
-    <!-- 길찾기 버튼 -->
-    <a href="https://map.naver.com/p/directions/-/-/%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%82%AC%EB%8B%B9%20%EC%86%8C%ED%86%B5%EA%B4%80"
-       target="_blank"
-       class="map-btn outline">
-        🚗 길찾기
+    <a href="https://map.naver.com/p/directions/-/-/%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%82%AC%EB%8B%B9%20%EC%86%8C%ED%86%B5%EA%B4%80" target="_blank" class="btn light">
+        길찾기
     </a>
 </section>
 
-    <!-- 하단 -->
-    <footer>
-        <p>귀한 걸음 하시어 자리를 빛내주시면 감사하겠습니다</p>
-    </footer>
+<footer>
+    귀한 걸음 하시어 자리를 빛내주시면 감사하겠습니다
+</footer>
 
-</div>
+<script>
+
+/* 스크롤 애니메이션 */
+const fades = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+    fades.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            el.classList.add('show');
+        }
+    });
+});
+
+/* D-day */
+const wedding = new Date("2026-10-24");
+const today = new Date();
+const diff = Math.ceil((wedding - today) / (1000 * 60 * 60 * 24));
+
+document.getElementById("dday").innerText = "D-" + diff;
+
+</script>
 
 </body>
 </html>
