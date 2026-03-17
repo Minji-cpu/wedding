@@ -1,0 +1,217 @@
+/* 결혼식 모바일 청첩장 스타일 */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffebee 0%, #fce4ec 50%, #f8bbd9 100%);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '💕';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 2em;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+body::after {
+    content: '💕';
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    font-size: 2em;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header {
+    background: linear-gradient(45deg, #ec407a, #f06292);
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.header::before {
+    content: '🌸';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5em;
+}
+
+.header::after {
+    content: '🌸';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+}
+
+.header h1 {
+    font-size: 2.8em;
+    margin: 0;
+    font-weight: 300;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header p {
+    font-size: 1.4em;
+    margin: 15px 0 0 0;
+    font-weight: 200;
+}
+
+.content {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.date-place {
+    margin-bottom: 40px;
+    background: rgba(236, 64, 122, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.date-place h2 {
+    font-size: 2em;
+    margin: 0 0 15px 0;
+    color: #c2185b;
+    font-weight: 300;
+}
+
+.date-place p {
+    font-size: 1.2em;
+    margin: 8px 0;
+    color: #ad1457;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.images img {
+    width: 45%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.images img:hover {
+    transform: scale(1.05);
+}
+
+.map {
+    margin-top: 40px;
+}
+
+.map h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #c2185b;
+    font-weight: 300;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo-gallery {
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(248, 187, 208, 0.2);
+    border-radius: 15px;
+}
+
+.photo-gallery h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #c2185b;
+    font-weight: 300;
+}
+
+#photo-upload {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 10px;
+    border: 2px dashed #ec407a;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    font-size: 1em;
+    color: #c2185b;
+}
+
+#photo-upload:hover {
+    background: rgba(236, 64, 122, 0.1);
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2.2em;
+    }
+    .header p {
+        font-size: 1.1em;
+    }
+    .date-place h2 {
+        font-size: 1.6em;
+    }
+    .images img {
+        width: 100%;
+        max-width: none;
+        border-radius: 20px;
+    }
+    .photo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    .photo-grid img {
+        height: 120px;
+    }
+}
