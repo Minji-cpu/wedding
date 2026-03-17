@@ -74,15 +74,29 @@ body {
     margin-bottom: 30px;
 }
 
-/* 지도 */
-.map {
-    margin-top: 50px;
+/* 지도 버튼 */
+.map-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
-.map h2 {
-    font-size: 14px;
-    color: #999;
-    margin-bottom: 15px;
+.map-btn:hover {
+    background-color: #444;
+}
+
+/* outline 버튼 */
+.map-btn.outline {
+    background-color: transparent;
+    color: #222;
+    border: 1px solid #ddd;
 }
 
 /* iframe */
