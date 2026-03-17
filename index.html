@@ -7,52 +7,70 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Noto+Serif+KR&display=swap" rel="stylesheet">
+    <!-- 고급 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Noto+Serif+KR:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="container">
-        <section class="hero">
-            <h1>결혼이요 결혼</h1>
-            <p class="subtitle">Wedding Invitation</p>
-        </section>
-        <section class="main">
-            <p class="message">
-                서로 다른 길을 걸어온 두 사람 이석영, 삼석영이<br>
-                이제 하나의 길을 함께 걸어가려 합니다.<br><br>
-                소중한 분들을 모시고<br>
-                새로운 시작을 함께하고자 합니다.
-            </p>
-        </section>
-        <section class="info">
+<div class="container">
+
+    <!-- 메인 커버 -->
+    <section class="hero">
+        <h1>Seokyoung & Seokyoung</h1>
+        <p class="subtitle">Wedding Invitation</p>
+        <div class="date">2026.10.24 SAT 11:00</div>
+    </section>
+
+    <!-- 메시지 -->
+    <section class="main">
+        <p class="message">
+            서로 다른 길을 걸어온 두 사람<br>
+            이석영 · 삼석영<br><br>
+            이제 하나의 길을 함께 걸어가려 합니다.<br><br>
+            소중한 분들을 모시고<br>
+            새로운 시작을 함께하고자 합니다.
+        </p>
+    </section>
+
+    <!-- 이미지 -->
+    <section class="gallery">
+        <img src="사진.jpg" alt="웨딩 사진">
+    </section>
+
+    <!-- 정보 -->
+    <section class="info">
+        <div class="card">
             <h2>💍 Wedding Day</h2>
             <p>2026년 10월 24일 토요일 오전 11시</p>
+        </div>
 
+        <div class="card">
             <h2>📍 Location</h2>
             <p>서울특별시 영등포구 의사당대로 1<br>국회의사당 소통관</p>
-        </section>
-        <section class="gallery">
-            <img src="사진.jpg" alt="사진">
-        </section>
-        <section class="map">
-            <h2>📌 오시는 길</h2>
+        </div>
+    </section>
 
-            <iframe 
-                src="https://maps.google.com/maps?q=국회의사당%20소통관&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                width="100%" 
-                height="300" 
-                style="border:0;"
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>src="https://maps.google.com/maps?q=국회의사당%20소통관&output=embed"></iframe>
+    <!-- 지도 -->
+    <section class="map">
+        <h2>📌 오시는 길</h2>
 
-        </section>
-        <footer>
-            <p>귀한 걸음 하시어 자리를 빛내주시면 감사하겠습니다</p>
-        </footer>
+        <iframe 
+            src="https://maps.google.com/maps?q=국회의사당%20소통관&z=15&output=embed"
+            width="100%" 
+            height="300" 
+            style="border:0; border-radius:12px;"
+            loading="lazy">
+        </iframe>
 
-    </div>
+    </section>
+
+    <!-- 하단 -->
+    <footer>
+        <p>귀한 걸음 하시어 자리를 빛내주시면 감사하겠습니다</p>
+    </footer>
+
+</div>
 
 </body>
 </html>
