@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Noto Serif KR', serif;
-    background-color: #fdfaf7;
+    background: linear-gradient(#fdfaf7, #f7f2ee);
     color: #333;
 }
 
@@ -15,14 +15,13 @@ body {
 
 /* 상단 */
 .hero {
-    padding: 80px 20px;
-    border-bottom: 1px solid #eee;
+    padding: 100px 20px 60px;
 }
 
 .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    letter-spacing: 5px;
+    font-size: 36px;
+    letter-spacing: 3px;
     margin: 0;
 }
 
@@ -31,28 +30,35 @@ body {
     color: #888;
 }
 
-/* 메인 메시지 */
+/* 메시지 */
 .message {
     margin: 40px 0;
-    line-height: 1.8;
+    line-height: 2;
     font-size: 16px;
-}
-
-/* 정보 */
-.info h2 {
-    margin-top: 30px;
-    font-size: 18px;
-}
-
-.info p {
-    margin: 10px 0;
 }
 
 /* 이미지 */
 .gallery img {
     width: 100%;
-    border-radius: 10px;
-    margin-top: 30px;
+    border-radius: 12px;
+    margin: 30px 0;
+}
+
+/* 카드 스타일 */
+.info {
+    margin-top: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    margin-bottom: 10px;
 }
 
 /* 지도 */
@@ -62,75 +68,7 @@ body {
 
 /* 하단 */
 footer {
-    margin-top: 50px;
-    padding: 20px;
-    font-size: 14px;
-    color: #777;
-}body {
-    margin: 0;
-    font-family: 'Noto Serif KR', serif;
-    background-color: #fdfaf7;
-    color: #333;
-}
-
-/* 전체 컨테이너 */
-.container {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-}
-
-/* 상단 */
-.hero {
-    padding: 80px 20px;
-    border-bottom: 1px solid #eee;
-}
-
-.hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    letter-spacing: 5px;
-    margin: 0;
-}
-
-.subtitle {
-    margin-top: 10px;
-    color: #888;
-}
-
-/* 메인 메시지 */
-.message {
-    margin: 40px 0;
-    line-height: 1.8;
-    font-size: 16px;
-}
-
-/* 정보 */
-.info h2 {
-    margin-top: 30px;
-    font-size: 18px;
-}
-
-.info p {
-    margin: 10px 0;
-}
-
-/* 이미지 */
-.gallery img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 30px;
-}
-
-/* 지도 */
-.map {
-    margin-top: 40px;
-}
-
-/* 하단 */
-footer {
-    margin-top: 50px;
+    margin-top: 60px;
     padding: 20px;
     font-size: 14px;
     color: #777;
